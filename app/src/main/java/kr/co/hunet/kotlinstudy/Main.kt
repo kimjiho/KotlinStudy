@@ -36,6 +36,7 @@ fun main() {
     //println("next : $nx")
 
     /* 점수를 입력 받아 평균 구하기 */
+    /*
     val emptyList = emptyList<Int>()
     val scoreList = emptyList.toMutableList()
     val reader = Scanner(System.`in`)
@@ -54,6 +55,8 @@ fun main() {
 
     println("총 점수는 -> $score")
     println("평균은 -> ${score / 5}")
+
+     */
 
     /**
      * List
@@ -104,13 +107,38 @@ fun main() {
 //    println(john)
 //    println(john2)
 //    println(john == john2)
+
+    //함수
+
+    //class
+
+    //data class
+
+    //getter, setter
+
+    //extends
+
+    //interface
+
+    /* 학생 정보를 한번에 입력받아 자기소개하는 함수 만들기 */
+    val reader = Scanner(System.`in`)
+
+    println("이름,나이,전공을 쉼표(,) 단위로 입력 하세요!")
+    var nxt = reader.next()
+    var arrayValue = nxt.split(",")
+
+    if(arrayValue.size < 3) {
+        println("다시 입력 하세요!")
+        nxt = reader.next()
+        arrayValue = nxt.split(",")
+    }
+
+    val john = Student(arrayValue[0], arrayValue[1].toInt(), arrayValue[2])
+    john.print()
 }
 
-fun sum(a: Int, b: Int) = a+b
-
-data class Person(
-    val name: String,
-    val age: Int
-) {
-    constructor(name: String, age: Int, hobby: String) : this(name, age)
+fun sum1(a: Int, b: Int = 0): Int {
+    return a+b
 }
+
+fun sum2(a: Int, b: Int) = a+b
