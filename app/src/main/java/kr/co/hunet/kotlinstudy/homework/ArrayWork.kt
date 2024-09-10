@@ -8,26 +8,18 @@ fun main() {
     //
     //array, when 사용하기
 
+    doSuccess()
+}
+
+fun doSuccess() {
     println("아무 숫자나 5개 입력하세요.")
 
     //val intArray = intArrayOf(5,4,3,2,1)
     val intArray = Array(5) { 0 }
     var count = 0
-    /* while */
-//    while (count < 5) {
-//        var readValue = readln()
-//
-//        if(readValue.isEmpty()) {
-//           readValue = readln()
-//        }
-//
-//        intArray[count] = readValue.run { toInt() }
-//
-//        count++
-//    }
 
-    /* do~while */
-    do {
+    /* while */
+    while (count < 5) {
         val readValue = readln()
 
         if(readValue.isEmpty()) {
@@ -37,7 +29,20 @@ fun main() {
         intArray[count] = readValue.run { toInt() }
 
         count++
-    }while (count < 5)
+    }
+
+    /* do~while */
+//    do {
+//        val readValue = readln()
+//
+//        if(readValue.isEmpty()) {
+//            continue
+//        }
+//
+//        intArray[count] = readValue.run { toInt() }
+//
+//        count++
+//    }while (count < 5)
 
     for(item in intArray) {
         /*
@@ -57,7 +62,6 @@ fun main() {
 
             else -> println("$item -> 홀수입니다.")
         }
-
          */
 
         //if~
@@ -73,6 +77,7 @@ fun main() {
         }else {
             println("$item -> 홀수입니다.")
         }
-
     }
+
+    //doSuccess()
 }
